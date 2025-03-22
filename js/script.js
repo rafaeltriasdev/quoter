@@ -10,6 +10,9 @@ form.addEventListener('submit', async e => {
     const cryptoSelected = [...crypto.children].find(option => option.selected).value;
     const amountValue = amount.value;
     try {
+        coinInfo.innerHTML = `
+        <div class="loader"></div>
+        `;
         const response = await (await fetch(`https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${cryptoSelected}&tsyms=${coinSelected}`)).json();
         const price = response.DISPLAY[cryptoSelected][coinSelected].PRICE;
         const priceHigH = response.DISPLAY[cryptoSelected][coinSelected].HIGH24HOUR;
