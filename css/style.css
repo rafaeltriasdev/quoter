@@ -18,6 +18,13 @@ body {
     background-color: oklch(0.5 0.134 242.749);
 }
 
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5rem;
+    color: #fff;
+}
+
 img{
     width: 40%;
     object-fit: cover;
@@ -87,14 +94,42 @@ img{
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border-top: 16px solid oklch(0.293 0.066 243.157); /* Blue */
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     animation: spin 2s linear infinite;
   }
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  @media (min-width: 600px) {
+    #container {
+        width: 100%;
+        
+    }
+  }
+
+  footer {
+    text-align: center;
+    color: #fff;
+  }
+  
+  
+  footer a {
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: white;
+  }
+
+  footer a:hover {
+    color: oklch(0.293 0.066 243.157);
+  }
+
+  .icono-footer {
+    width: 30px;
+    height: 30px;
   }
